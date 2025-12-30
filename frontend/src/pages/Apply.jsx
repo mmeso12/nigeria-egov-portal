@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import "./Apply.css";
+import { submitApplication } from "../services/applicationService";
+
 
 function Apply() {
   const [type, setType] = useState("passport");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [tracking, setTracking] = useState("");
+
 
   const [form, setForm] = useState({
     name: "",
@@ -22,15 +27,39 @@ function Apply() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate backend call
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      // Build clean payload for backend
+      const data = {
+        name: form.name,
+        familyName: form.familyName,
+        dateOfBirth: form.dateOfBirth,
+        country: form.country,
+        lga: form.lga,
+        city: form.city,
+        phone: form.phone,
+        sex: form.sex,
+        email: form.email,
+
+        // include any extra fields you collected
+        nationality: form.nationality,
+        motherName: form.motherName,
+        pollingUnit: form.pollingUnit,
+      };
+
+      const res = await submitApplication(type, data);
+
+      // res.application.tracking exists (based on your backend response)
+      setTracking(res.application.tracking);
       setSubmitted(true);
-    }, 1500);
+    } catch (err) {
+      setError(err?.response?.data?.message || err.message || "Submission failed");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {

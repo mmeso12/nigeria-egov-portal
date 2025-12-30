@@ -1,0 +1,66 @@
+.loginPage {
+  background: var(--gray-100);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.loginCard {
+  max-width: 420px;
+  width: 100%;
+  padding: 36px;
+  border-radius: var(--radius-lg);
+}
+
+.loginCard h1 {
+  font-weight: 900;
+  color: var(--gray-900);
+  margin-bottom: 10px;
+}
+
+.loginCard .sub {
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+
+.error {
+  color: #c8102e;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.formActions {
+  margin-top: 20px;
+  text-align: center;
+}
+.modeTabs{
+  display:flex;
+  gap:10px;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  padding: 8px;
+  border-radius: 14px;
+  margin: 14px 0 18px;
+}
+.tab{
+  flex:1;
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  color: var(--gray-700);
+}
+.tab.active{
+  background: var(--white);
+  border-color: rgba(0,135,81,0.25);
+  color: var(--green-700);
+  box-shadow: var(--shadow-sm);
+}
+.below { margin-top: 16px; color: var(--gray-600); font-weight: 650; }
+.link { color: var(--green-700); font-weight: 900; }
+.link:hover { text-decoration: underline; }
+.error { margin: 10px 0; color: #c8102e; font-weight: 900; }

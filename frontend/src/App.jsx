@@ -10,6 +10,8 @@ import Status from "./pages/Status";
 import Feedback from "./pages/Feedback";
 import AdminDashboard from "./pages/AdminDashboard";
 import "./styles/global.css";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminRoute from "./components/AdminRoute";
 
 function App() {
   return (
@@ -20,10 +22,24 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/apply" element={<Apply />} />
+          <Route
+            path="/apply"
+            element={
+              <ProtectedRoute>
+                <Apply />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/status" element={<Status />} />
           <Route path="/feedback" element={<Feedback />} />
-          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route
+            path="/admin/dashboard"
+            element={
+              <AdminRoute>
+                <AdminDashboard />
+              </AdminRoute>
+            }
+          />
         </Routes>
       </main>
       <Footer />
