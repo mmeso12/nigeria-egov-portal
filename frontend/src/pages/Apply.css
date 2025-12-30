@@ -1,0 +1,85 @@
+.applyPage {
+  background: var(--gray-100);
+  min-height: 100vh;
+  padding: 40px 0 60px;
+}
+
+.applyHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.applyHeader h1 {
+  font-weight: 900;
+  color: var(--gray-900);
+  margin-bottom: 10px;
+}
+
+.applyHeader p {
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.applyForm {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.extraSection {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-200);
+}
+
+.extraSection h3 {
+  font-weight: 800;
+  color: var(--green-700);
+  margin-bottom: 4px;
+}
+
+.helper {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.formActions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.applySuccess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.successCard {
+  text-align: center;
+  padding: 50px;
+}
+
+.successCard h2 {
+  font-weight: 900;
+  color: var(--green-700);
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
