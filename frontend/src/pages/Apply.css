@@ -83,3 +83,12 @@
     grid-template-columns: 1fr;
   }
 }
+.errorBox{
+  background: rgba(200,16,46,0.08);
+  border: 1px solid rgba(200,16,46,0.22);
+  color: #8a0d1f;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 850;
+  margin: 10px 0 16px;
+}

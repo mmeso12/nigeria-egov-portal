@@ -1,0 +1,50 @@
+.signupPage {
+  background: var(--gray-100);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.signupCard {
+  max-width: 460px;
+  width: 100%;
+  padding: 36px;
+  border-radius: var(--radius-lg);
+}
+
+.signupCard h1 {
+  font-weight: 950;
+  color: var(--gray-900);
+  margin-bottom: 10px;
+}
+
+.signupCard .sub {
+  color: var(--gray-600);
+  margin-bottom: 22px;
+}
+
+.successBox{
+  background: rgba(0,135,81,0.10);
+  border: 1px solid rgba(0,135,81,0.22);
+  color: var(--green-700);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.errorBox{
+  background: rgba(200,16,46,0.08);
+  border: 1px solid rgba(200,16,46,0.22);
+  color: #8a0d1f;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 850;
+  margin: 10px 0 16px;
+}
+
+.below { margin-top: 16px; color: var(--gray-600); font-weight: 650; }
+.link { color: var(--green-700); font-weight: 900; }
+.link:hover { text-decoration: underline; }

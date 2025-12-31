@@ -5,6 +5,12 @@ export async function login(email, password) {
   return res.data; // expects { token, user }
 }
 
+export async function register(name, email, password) {
+  const res = await api.post("/auth/register", { name, email, password });
+  return res.data; // could return { message, user } or similar
+}
+
+
 export function saveSession(token, user) {
   localStorage.setItem("govng_token", token);
   localStorage.setItem("govng_user", JSON.stringify(user));

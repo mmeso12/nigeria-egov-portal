@@ -71,6 +71,7 @@ function Apply() {
             Your <strong>{type.toUpperCase()}</strong> application has been
             received. You will receive a tracking number via email shortly.
           </p>
+          <p><strong>Tracking Number:</strong> {tracking}</p>
         </div>
       </div>
     );
@@ -273,6 +274,8 @@ function Apply() {
               </div>
             </div>
           )}
+
+          {error && <div className="errorBox">{error}</div>}
 
           <div className="formActions">
             <button type="submit" className="btn btn-primary" disabled={loading}>
